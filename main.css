@@ -12,6 +12,16 @@ body {
 	margin: 0px;
 }
 
+/* border on transparent image
+ * https://stackoverflow.com/questions/9612758/add-a-css-border-on-hover-without-moving-the-element
+ */
+.p {
+	margin: 8px;
+	width: 30%;
+	height: auto;
+}
+
 .p:hover {
-	border: 2px solid var(--charColour)
+	border: 5px solid var(--charColour);
+	margin: 3px;
 }
