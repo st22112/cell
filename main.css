@@ -1,5 +1,6 @@
 :root {
 	--bgColour: #696969;
+	--charColour: #8f8f8f;
 }
 
 body {
@@ -9,4 +10,8 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;
 	margin: 0px;
+}
+
+.p:hover {
+	border: 2px solid var(--charColour)
 }
