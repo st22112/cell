@@ -1,4 +1,9 @@
+:root {
+	--bgColour: #696969;
+}
+
 body {
+	background-color: var(--bgColour);
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
