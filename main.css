@@ -14,6 +14,9 @@ body {
 
 /* border on transparent image
  * https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts
+ * only react when on non-transparent parts
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map
+ * https://www.w3schools.com/htmL/html_images_imagemap.asp
  */
 .p {
 	width: 30%;
