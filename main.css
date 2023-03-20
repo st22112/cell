@@ -16,18 +16,11 @@ body {
  * https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts
  */
 .p {
-	/*
-	margin: 8px;
-	 */
 	width: 30%;
 	height: auto;
 }
 
 .p:hover {
-	/*
-	border: 5px solid var(--charColour);
-	margin: 3px;
-	 */
 	filter: drop-shadow(2px 2px 0 white)
         drop-shadow(-2px 2px 0 white)
         drop-shadow(2px -2px 0 white)
