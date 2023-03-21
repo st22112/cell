@@ -1,0 +1,7 @@
+javascript animation for text
+https://www.w3schools.com/howto/howto_js_animate.asp
+https://www.tutorialspoint.com/How-to-hide-HTML-element-with-JavaScript
+
+use trignometry to find distance from "center" (behind image)
+if distance > n
+	start fading
