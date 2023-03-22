@@ -5,3 +5,19 @@ https://www.tutorialspoint.com/How-to-hide-HTML-element-with-JavaScript
 use trignometry to find distance from "center" (behind image)
 if distance > n
 	start fading
+https://www.geeksforgeeks.org/how-to-add-fade-in-effect-using-pure-javascript/
+https://www.geeksforgeeks.org/how-to-add-fade-out-effect-using-pure-javascript/
+
+fade then make hidden?
+
+
+Nnamabia
+angry at police
+pity for old man
+
+Old man
+weak
+helpless
+scared
+humiliated
+miserable
