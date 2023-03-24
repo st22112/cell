@@ -9,19 +9,38 @@
 		<script>
 			async function intro() {
 				await fadein("intro1", 2000, 42);
+				await fadeout("intro1", 2000, 42);
 				await fadein("intro2", 2000, 42);
 				console.log("done");
 			}
 
 			function fadein(id, duration, step) {
 				return new Promise((resolve) => {
-					var stepTime = 1/step
+					var stepOpacity = 1/step
 					var ms = duration/step
 					var fade = document.getElementById(id);
 					var opacity = 0;
 					var intervalID = setInterval(function() {
 						if (opacity < 1) {
-							opacity = opacity + stepTime;
+							opacity = opacity + stepOpacity;
+							fade.style.opacity = opacity;
+							} else {
+								clearInterval(intervalID);
+								resolve()
+							}
+					}, ms);
+				});
+			}
+
+			function fadeout(id, duration, step) {
+				return new Promise((resolve) => {
+					var opacity = Number(window.getComputedStyle(id).getPropertyValue("opacity"));
+					var stepOpacity = 1/step
+					var ms = duration/step
+					var fade = document.getElementById(id);
+					var intervalID = setInterval(function() {
+						if (opacity > 0) {
+							opacity = opacity - stepOpacity;
 							fade.style.opacity = opacity;
 							} else {
 								clearInterval(intervalID);
