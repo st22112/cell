@@ -12,6 +12,19 @@ body {
 	margin: 0px;
 }
 
+h1 {
+	background-color: yellow;
+	/*
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	*/
+}
+
 /* border on transparent image
  * https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts
  * only react when on non-transparent parts

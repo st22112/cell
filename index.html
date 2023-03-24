@@ -8,18 +8,24 @@
 		<link rel="stylesheet" href="main.css">
 		<script>
 			async function intro() {
-				await fadein("intro1", 2000, 42);
-				await fadeout("intro1", 2000, 42);
-				await fadein("intro2", 2000, 42);
+				await sleep(500)
+				await fadein("intro", 1000, 42);
+				await sleep(1500)
+				await fadeout("intro", 1000, 42);
+				await change("intro", "wow")
+				await sleep(500)
+				await fadein("intro", 1000, 42);
+				await sleep(1500)
+				await fadeout("intro", 1000, 42);
 				console.log("done");
 			}
 
 			function fadein(id, duration, step) {
 				return new Promise((resolve) => {
-					var stepOpacity = 1/step
-					var ms = duration/step
 					var fade = document.getElementById(id);
-					var opacity = 0;
+					var opacity = Number(window.getComputedStyle(fade).getPropertyValue("opacity"));
+					var stepOpacity = (1-opacity)/step
+					var ms = duration/step
 					var intervalID = setInterval(function() {
 						if (opacity < 1) {
 							opacity = opacity + stepOpacity;
@@ -34,10 +40,10 @@
 
 			function fadeout(id, duration, step) {
 				return new Promise((resolve) => {
-					var opacity = Number(window.getComputedStyle(id).getPropertyValue("opacity"));
-					var stepOpacity = 1/step
-					var ms = duration/step
 					var fade = document.getElementById(id);
+					var opacity = Number(window.getComputedStyle(fade).getPropertyValue("opacity"));
+					var stepOpacity = opacity/step
+					var ms = duration/step
 					var intervalID = setInterval(function() {
 						if (opacity > 0) {
 							opacity = opacity - stepOpacity;
@@ -49,11 +55,27 @@
 					}, ms);
 				});
 			}
+
+			function sleep(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			function change(id, text) {
+				document.getElementById(id).innerHTML = text;
+			}
 		</script>
 	</head>
 	<body onload="intro()">
-		<h1 id="intro1" style="opacity:0;">Testing stuff 1</h1>
-		<h1 id="intro2" style="opacity:0;">Testing stuff 2</h1>
+		<h1 id="intro" class="intro" style="opacity:0;">Testing stuff 1</h1>
+		<h1>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test<br>
+			some random testing text to test some stuff I want to test
+		</h1>
 		<!-- <img src="./trans.png" class="p" alt="hi"> -->
 	</body>
 </html>
