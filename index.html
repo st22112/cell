@@ -7,34 +7,34 @@
 		<link rel="preload" href="main.css" as="style">
 		<link rel="stylesheet" href="main.css">
 		<script>
-			//window.onload = intro();
-
-			function intro() {
-				fadein("intro", 1000);
+			async function intro() {
+				await fadein("intro1", 2000, 42);
+				await fadein("intro2", 2000, 42);
+				console.log("done");
 			}
 
-			function fadein(id, ms) {
-				console.log("wow");
-				console.log(id);
-				console.log(ms);
-				console.log(document.getElementById("intro"));
-				console.log(document.getElementById(id));
-
-				var fade = document.getElementById(id);
-				var opacity = 0;
-				var intervalID = setInterval(function() {
-					if (opacity < 1) {
-						opacity = opacity + 0.1;
-						fade.style.opacity = opacity;
-						} else {
-							clearInterval(intervalID);
-						}
-				}, ms);
+			function fadein(id, duration, step) {
+				return new Promise((resolve) => {
+					var stepTime = 1/step
+					var ms = duration/step
+					var fade = document.getElementById(id);
+					var opacity = 0;
+					var intervalID = setInterval(function() {
+						if (opacity < 1) {
+							opacity = opacity + stepTime;
+							fade.style.opacity = opacity;
+							} else {
+								clearInterval(intervalID);
+								resolve()
+							}
+					}, ms);
+				});
 			}
 		</script>
 	</head>
 	<body onload="intro()">
-		<h1 id="intro" style="opacity:0;">Testing stuff</h1>
+		<h1 id="intro1" style="opacity:0;">Testing stuff 1</h1>
+		<h1 id="intro2" style="opacity:0;">Testing stuff 2</h1>
 		<!-- <img src="./trans.png" class="p" alt="hi"> -->
 	</body>
 </html>
