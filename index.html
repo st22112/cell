@@ -6,11 +6,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="main.css" as="style">
 		<link rel="stylesheet" href="main.css">
+		<script>
+			//window.onload = intro();
+
+			function intro() {
+				fadein("intro", 1000);
+			}
+
+			function fadein(id, ms) {
+				console.log("wow");
+				console.log(id);
+				console.log(ms);
+				console.log(document.getElementById("intro"));
+				console.log(document.getElementById(id));
+
+				var fade = document.getElementById(id);
+				var opacity = 0;
+				var intervalID = setInterval(function() {
+					if (opacity < 1) {
+						opacity = opacity + 0.1;
+						fade.style.opacity = opacity;
+						} else {
+							clearInterval(intervalID);
+						}
+				}, ms);
+			}
+		</script>
 	</head>
-	<body>
-		<h1>Testing stuff</h1>
-		<img src="./trans.png" class="p" alt="hi">
-		<img src="./trans.png" class="p" alt="hi">
-		<img src="./trans.png" class="p" alt="hi">
+	<body onload="intro()">
+		<h1 id="intro" style="opacity:0;">Testing stuff</h1>
+		<!-- <img src="./trans.png" class="p" alt="hi"> -->
 	</body>
 </html>

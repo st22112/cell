@@ -11,13 +11,32 @@ https://www.geeksforgeeks.org/how-to-add-fade-out-effect-using-pure-javascript/
 fade then make hidden?
 
 
-Nnamabia
-angry at police
-pity for old man
+Ask character a question.
+Character answers back.
+Keyword displays behind character.
+example:
+	How do you feel when the other inmates make fun of you?
+	I can't do or say anything back. I feel *weak*.
+	The word "weak" apears behind silouette.
 
-Old man
+intro: (Transition by fading in and out text. Make text glow)
+I'm an old man
+My son is wanted for armed robbery
+The police couldn't arrest my son
+So they locked me up instead
+
+Old man {
+humiliated
+miserable
 weak
 helpless
 scared
-humiliated
-miserable
+}
+
+
+ | Intro
+ | create old man image
+ | Create question buttons
+ | Add question answers
+ | Add text behind old man
+ | CSS
