@@ -3,26 +3,18 @@
 	--charColour: #8f8f8f;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	background-color: var(--bgColour);
+	height: 100%;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
 	margin: 0px;
-}
-
-h1 {
-	background-color: yellow;
-	/*
-	position: absolute;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-	*/
 }
 
 /* border on transparent image
@@ -41,4 +33,12 @@ h1 {
         drop-shadow(-2px 2px 0 white)
         drop-shadow(2px -2px 0 white)
         drop-shadow(-2px -2px 0 white);
+}
+
+.intro {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
