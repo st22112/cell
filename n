@@ -34,7 +34,7 @@ scared
 }
 
 
- | Intro
+d| Intro
  | create old man image
  | Create question buttons
  | Add question answers
