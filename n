@@ -26,16 +26,22 @@ The police couldn't arrest my son
 So they locked me up instead
 
 Old man {
-humiliated
-miserable
-weak
-helpless
-scared
+	How did you feel when other inmates make fun of you?
+	I couldn't do or say anything back. I felt *weak*
+
+	How did you feel that you couldn't afford bathing water?
+	I felt *miserable* that I couldn't clean myself in this dirty cell
+
+	How did you feel when the police made you parade naked to get bathing water?
+	I have no choice but to strip to be able to clean myself. I felt *humiliated*
+
+	How did you feel when the police locked you up for a crime you didn't do?
+	I felt *helpless*. I couldn't do anything, they wouldn't listen to me. It was so unfair.
 }
 
 
 d| Intro
- | create old man image
+d| create old man image
  | Create question buttons
  | Add question answers
  | Add text behind old man

@@ -15,19 +15,28 @@
 				await change("intro", "My son is wanted for armed robbery")
 				await sleep(500)
 				await fadein("intro", 1000, 42);
-				await sleep(1500)
+				await sleep(2500)
 				await fadeout("intro", 1000, 42);
 				await change("intro", "But the police couldn't arrest my son")
 				await sleep(500)
 				await fadein("intro", 1000, 42);
-				await sleep(1500)
+				await sleep(2500)
 				await fadeout("intro", 1000, 42);
 				await change("intro", "So they locked me up instead")
 				await sleep(500)
 				await fadein("intro", 1000, 42);
-				await sleep(1500)
-				await fadeout("intro", 1000, 42);
+				await sleep(2500)
+				fadeout("intro", 1000, 42);
+				await sleep(1000)
+				await fadein("questions", 1500, 42);
 				console.log("done");
+			}
+
+			async function fadeoutq(id, duration, step) {
+				var q = document.getElementById(id);
+				q.style.transform = "scale(3)";
+				await fadeout(id, duration, step);
+				q.remove();
 			}
 
 			function fadein(id, duration, step) {
@@ -76,7 +85,18 @@
 		</script>
 	</head>
 	<body onload="intro()">
-		<h1 id="intro" class="intro" style="opacity:0;">I'm an old man</h1>
-		<img src="./man.png" class="p" alt="hi">
+		<div class="left">
+			<img src="./man.png" class="p" alt="hi">
+		</div>
+		<div class="right">
+			<h1 id="intro" class="intro" style="opacity:0;">I'm an old man</h1>
+			<div id="questions" class="questions" style="opacity:0;">
+				<h2>Ask a question</h2>
+				<p id="q1" onclick="fadeoutq('q1', 1000, 42)">How did you feel when other inmates make fun of you?</p>
+				<p id="q2" onclick="fadeoutq('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
+				<p id="q3" onclick="fadeoutq('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
+				<p id="q4" onclick="fadeoutq('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
+			</div>
+		</div>
 	</body>
 </html>
