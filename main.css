@@ -1,3 +1,15 @@
+@font-face {
+	font-family: 'LibreFranklin';
+	font-style: normal;
+	src: url("./LibreFranklin-Regular.woff2")
+}
+
+@font-face {
+	font-family: "LibreFranklin";
+	font-style: bold;
+	src: url("./LibreFranklin-Bold.woff2")
+}
+
 :root {
 	--bgColour: #222222;
 	--charColour: #c9c9c9;
@@ -17,6 +29,8 @@ body {
 	padding-right: 0px;
 	margin: 0px;
 	display: flex;
+	overflow: hidden;
+	font-family: "LibreFranklin";
 }
 
 .p {
@@ -30,6 +44,7 @@ body {
 
 .o {
 	font-size: 2vw;
+	font-weight: bold;
 	animation: idk 1s ease-in-out infinite alternate;
 }
 
@@ -101,7 +116,6 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	/*margin-bottom: 50px;*/
 }
 
 .questions > p {
