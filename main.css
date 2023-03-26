@@ -121,9 +121,10 @@ body {
 .questions > p {
 	width: max-content;
 	border: solid;
+	border-radius: 5px;
+	border-color: var(--charColour);
 	margin: 10px;
 	padding: 5px;
-	border-color: var(--charColour);
 	font-size: 1.1vw;
 	transition: transform .2s;
 	cursor: pointer;
