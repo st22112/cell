@@ -27,6 +27,34 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+.o1 {
+	position: absolute;
+	top: 40%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+}
+
+.o2 {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+}
+
+.o3 {
+	position: absolute;
+	top: 30%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+}
+
+.o4 {
+	position: absolute;
+	top: 40%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+}
+
 /*
 .p:hover {
 	filter: drop-shadow(2px 2px 0 white)
