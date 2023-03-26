@@ -1,6 +1,6 @@
 :root {
 	--bgColour: #222222;
-	--charColour: #8f8f8f;
+	--charColour: #c9c9c9;
 }
 
 html {
@@ -9,6 +9,7 @@ html {
 
 body {
 	background-color: var(--bgColour);
+	color: var(--charColour);
 	height: 100%;
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -33,8 +34,8 @@ body {
 }
 
 @keyframes idk {
-	0%	{color: #000000}
-	100%	{color: #222222}
+	0%	{color: var(--charColour)}
+	100%	{color: #FFFFFF}
 }
 
 .o1 {
@@ -147,6 +148,6 @@ body {
 }
 
 span {
-	border: solid;
-	border-color: var(--charColour);
+	font-weight: bold;
+	animation: idk 1s ease-in-out infinite alternate;
 }
