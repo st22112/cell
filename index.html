@@ -30,7 +30,6 @@
 				fadeout("intro", 1000, 42);
 				await sleep(1000);
 				await fadein("questions", 1500, 42);
-				console.log("done");
 			}
 
 			async function q(id, duration, step) {
@@ -44,40 +43,40 @@
 					change("q", "How did you feel when the other inmates made fun of you?");
 					await change("a", "Old man: I couldn't say or do anything back. I felt <span>weak</span>");
 					await fadein("q", 1000, 42);
-					await sleep(1500);
+					await sleep(2000);
 					await fadein("a", 1000, 42);
+					await sleep(500);
 					await fadein("o1", 1000, 42);
-					console.log("q1");
 				} else if (id == "q2") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel that you couldn't afford bathing water?");
 					await change("a", "Old man: I felt <span>miserable</span> that I couldn't clean myself while in the dirty cell");
 					await fadein("q", 1000, 42);
-					await sleep(1500);
+					await sleep(2000);
 					await fadein("a", 1000, 42);
+					await sleep(500);
 					await fadein("o2", 1000, 42);
-					console.log("q2");
 				} else if (id == "q3") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police made you parade naked to get bathing water?");
 					await change("a", "Old man: I had no choice but to strip to be able to clean myself. I felt <span>humiliated</span>");
 					await fadein("q", 1000, 42);
-					await sleep(1500);
+					await sleep(2000);
 					await fadein("a", 1000, 42);
+					await sleep(500);
 					await fadein("o3", 1000, 42);
-					console.log("q3");
 				} else if (id == "q4") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police locked you up for a crime you didn't do?");
 					await change("a", "Old man: I felt <span>helpless</span>. I couldn't do anything, they wouldn't listen to me. Do I deserve to be treated like this?");
 					await fadein("q", 1000, 42);
-					await sleep(1500);
+					await sleep(2000);
 					await fadein("a", 1000, 42);
+					await sleep(500);
 					await fadein("o4", 1000, 42);
-					console.log("q4");
 				}
 			}
 
