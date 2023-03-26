@@ -8,50 +8,87 @@
 		<link rel="stylesheet" href="main.css">
 		<script>
 			async function intro() {
-				await sleep(500)
+				await sleep(500);
 				await fadein("intro", 1000, 42);
-				await sleep(1500)
+				await sleep(1500);
 				await fadeout("intro", 1000, 42);
-				await change("intro", "My son is wanted for armed robbery")
-				await sleep(500)
+				await change("intro", "My son is wanted for armed robbery");
+				await sleep(500);
 				await fadein("intro", 1000, 42);
-				await sleep(2500)
+				await sleep(2500);
 				await fadeout("intro", 1000, 42);
-				await change("intro", "But the police couldn't arrest my son")
-				await sleep(500)
+				await change("intro", "But the police couldn't arrest my son");
+				await sleep(500);
 				await fadein("intro", 1000, 42);
-				await sleep(2500)
+				await sleep(2500);
 				await fadeout("intro", 1000, 42);
-				await change("intro", "So they locked me up instead")
-				await sleep(500)
+				await change("intro", "So they locked me up instead");
+				await sleep(500);
 				await fadein("intro", 1000, 42);
-				await sleep(2500)
+				await sleep(2500);
 				fadeout("intro", 1000, 42);
-				await sleep(1000)
+				await sleep(1000);
 				await fadein("questions", 1500, 42);
 				console.log("done");
 			}
 
-			async function fadeoutq(id, duration, step) {
+			async function q(id, duration, step) {
 				var q = document.getElementById(id);
 				q.style.transform = "scale(3)";
 				await fadeout(id, duration, step);
-				q.remove();
+				await q.remove();
+				if (id == "q1") {
+					fadeout("q", 1000, 42);
+					await fadeout("a", 1000, 42);
+					change("q", "How did you feel when other inmates make fun of you?");
+					await change("a", "I couldn't do or say anything back. I felt <span>weak</span>");
+					await fadein("q", 1000, 42);
+					await sleep(1000);
+					await fadein("a", 1000, 42);
+					console.log("q1");
+				} else if (id == "q2") {
+					fadeout("q", 1000, 42);
+					await fadeout("a", 1000, 42);
+					change("q", "How did you feel that you couldn't afford bathing water?");
+					await change("a", "I felt <span>miserable</span> that I couldn't clean myself in this dirty cell");
+					await fadein("q", 1000, 42);
+					await sleep(1000);
+					await fadein("a", 1000, 42);
+					console.log("q2");
+				} else if (id == "q3") {
+					fadeout("q", 1000, 42);
+					await fadeout("a", 1000, 42);
+					change("q", "How did you feel when the police made you parade naked to get bathing water?");
+					await change("a", "I have no choice but to strip to be able to clean myself. I felt <span>humiliated</span>");
+					await fadein("q", 1000, 42);
+					await sleep(1000);
+					await fadein("a", 1000, 42);
+					console.log("q3");
+				} else if (id == "q4") {
+					fadeout("q", 1000, 42);
+					await fadeout("a", 1000, 42);
+					change("q", "How did you feel when the police locked you up for a crime you didn't do?");
+					await change("a", "I felt <span>helpless</span>. I couldn't do anything, they wouldn't listen to me. It was so unfair.");
+					await fadein("q", 1000, 42);
+					await sleep(1000);
+					await fadein("a", 1000, 42);
+					console.log("q4");
+				}
 			}
 
 			function fadein(id, duration, step) {
 				return new Promise((resolve) => {
 					var fade = document.getElementById(id);
 					var opacity = Number(window.getComputedStyle(fade).getPropertyValue("opacity"));
-					var stepOpacity = (1-opacity)/step
-					var ms = duration/step
+					var stepOpacity = (1-opacity)/step;
+					var ms = duration/step;
 					var intervalID = setInterval(function() {
 						if (opacity < 1) {
 							opacity = opacity + stepOpacity;
 							fade.style.opacity = opacity;
 							} else {
 								clearInterval(intervalID);
-								resolve()
+								resolve();
 							}
 					}, ms);
 				});
@@ -61,15 +98,15 @@
 				return new Promise((resolve) => {
 					var fade = document.getElementById(id);
 					var opacity = Number(window.getComputedStyle(fade).getPropertyValue("opacity"));
-					var stepOpacity = opacity/step
-					var ms = duration/step
+					var stepOpacity = opacity/step;
+					var ms = duration/step;
 					var intervalID = setInterval(function() {
 						if (opacity > 0) {
 							opacity = opacity - stepOpacity;
 							fade.style.opacity = opacity;
 							} else {
 								clearInterval(intervalID);
-								resolve()
+								resolve();
 							}
 					}, ms);
 				});
@@ -89,13 +126,19 @@
 			<img src="./man.png" class="p" alt="hi">
 		</div>
 		<div class="right">
+			<div class="a">
+				<div class="ina">
+					<p id="q" style="opacity:0;">question</p>
+					<p id="a" style="opacity:0;">answer</p>
+				</div>
+			</div>
 			<h1 id="intro" class="intro" style="opacity:0;">I'm an old man</h1>
 			<div id="questions" class="questions" style="opacity:0;">
 				<h2>Ask a question</h2>
-				<p id="q1" onclick="fadeoutq('q1', 1000, 42)">How did you feel when other inmates make fun of you?</p>
-				<p id="q2" onclick="fadeoutq('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
-				<p id="q3" onclick="fadeoutq('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
-				<p id="q4" onclick="fadeoutq('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
+				<p id="q1" onclick="q('q1', 1000, 42)">How did you feel when other inmates make fun of you?</p>
+				<p id="q2" onclick="q('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
+				<p id="q3" onclick="q('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
+				<p id="q4" onclick="q('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
 			</div>
 		</div>
 	</body>

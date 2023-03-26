@@ -42,7 +42,7 @@ Old man {
 
 d| Intro
 d| create old man image
- | Create question buttons
+d| Create question buttons
  | Add question answers
  | Add text behind old man
  | CSS
