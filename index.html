@@ -37,10 +37,10 @@
 
 			async function q(id, duration, step) {
 				var q = document.getElementById(id);
-				q.style.transform = "scale(3)";
-				await fadeout(id, duration, step);
-				await q.remove();
 				if (id == "q1") {
+					q.style.transform = "scale(3)";
+					await fadeout(id, duration, step);
+					await q.remove();
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the other inmates made fun of you?");
@@ -51,6 +51,9 @@
 					await sleep(500);
 					await fadein("o1", 1000, 42);
 				} else if (id == "q2") {
+					q.style.transform = "scale(3)";
+					await fadeout(id, duration, step);
+					await q.remove();
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel that you couldn't afford bathing water?");
@@ -61,6 +64,9 @@
 					await sleep(500);
 					await fadein("o2", 1000, 42);
 				} else if (id == "q3") {
+					q.style.transform = "scale(3)";
+					await fadeout(id, duration, step);
+					await q.remove();
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police made you parade naked to get bathing water?");
@@ -71,6 +77,9 @@
 					await sleep(500);
 					await fadein("o3", 1000, 42);
 				} else if (id == "q4") {
+					q.style.transform = "scale(3)";
+					await fadeout(id, duration, step);
+					await q.remove();
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police locked you up for a crime you didn't do?");
