@@ -99,11 +99,6 @@ body {
 	top: 0;
 }
 
-.ina > p {
-	text-align: center;
-	font-size: 1.5vw;
-}
-
 .ina {
 	position: absolute;
 	width: 100%;
@@ -111,4 +106,14 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 
+}
+
+.ina > p {
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+span {
+	border: solid;
+	border-color: var(--charColour);
 }

@@ -43,6 +43,6 @@ Old man {
 d| Intro
 d| create old man image
 d| Create question buttons
- | Add question answers
+d| Add question answers
  | Add text behind old man
  | CSS
