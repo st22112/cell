@@ -80,6 +80,8 @@
 					await fadein("a", 1000, 42);
 					await sleep(500);
 					await fadein("o4", 1000, 42);
+				} else {
+					return;
 				}
 				++qcount;
 				if (qcount >= 4) {
