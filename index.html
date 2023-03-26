@@ -94,8 +94,12 @@
 				}
 				++qcount;
 				if (qcount >= 4) {
-					console.log("ok")
+					await sleep(5000);
+					startmain()
 				}
+			}
+
+			function startmain() {
 			}
 
 			function fadein(id, duration, step) {
@@ -144,14 +148,14 @@
 		</script>
 	</head>
 	<body onload="intro()">
-		<div class="left">
+		<div class="left start">
 			<p id="o1" class="o1 o" style="opacity:0;">weak</p>
 			<p id="o2" class="o2 o" style="opacity:0;">miserable</p>
 			<p id="o3" class="o3 o" style="opacity:0;">humiliated</p>
 			<p id="o4" class="o4 o" style="opacity:0;">helpless</p>
 			<img src="./man.png" class="p" alt="hi">
 		</div>
-		<div class="right">
+		<div class="right start">
 			<div class="a">
 				<div class="ina">
 					<p id="q" style="opacity:0;">question</p>
@@ -166,6 +170,9 @@
 				<p id="q3" onclick="q('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
 				<p id="q4" onclick="q('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
 			</div>
+		</div>
+		<div class="main">
+			<p>test</p>
 		</div>
 	</body>
 </html>
