@@ -7,6 +7,9 @@
 		<link rel="preload" href="main.css" as="style">
 		<link rel="stylesheet" href="main.css">
 		<script>
+
+			var qcount = 0;
+
 			async function intro() {
 				await change("intro", "I'm an old man");
 				await sleep(500);
@@ -77,6 +80,10 @@
 					await fadein("a", 1000, 42);
 					await sleep(500);
 					await fadein("o4", 1000, 42);
+				}
+				++qcount;
+				if (qcount >= 4) {
+					console.log("ok")
 				}
 			}
 
