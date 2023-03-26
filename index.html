@@ -41,36 +41,36 @@
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when other inmates make fun of you?");
-					await change("a", "I couldn't do or say anything back. I felt <span>weak</span>");
+					await change("a", "Old man: I couldn't do or say anything back. I felt <span>weak</span>");
 					await fadein("q", 1000, 42);
-					await sleep(1000);
+					await sleep(1500);
 					await fadein("a", 1000, 42);
 					console.log("q1");
 				} else if (id == "q2") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel that you couldn't afford bathing water?");
-					await change("a", "I felt <span>miserable</span> that I couldn't clean myself in this dirty cell");
+					await change("a", "Old man: I felt <span>miserable</span> that I couldn't clean myself in this dirty cell");
 					await fadein("q", 1000, 42);
-					await sleep(1000);
+					await sleep(1500);
 					await fadein("a", 1000, 42);
 					console.log("q2");
 				} else if (id == "q3") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police made you parade naked to get bathing water?");
-					await change("a", "I have no choice but to strip to be able to clean myself. I felt <span>humiliated</span>");
+					await change("a", "Old man: I have no choice but to strip to be able to clean myself. I felt <span>humiliated</span>");
 					await fadein("q", 1000, 42);
-					await sleep(1000);
+					await sleep(1500);
 					await fadein("a", 1000, 42);
 					console.log("q3");
 				} else if (id == "q4") {
 					fadeout("q", 1000, 42);
 					await fadeout("a", 1000, 42);
 					change("q", "How did you feel when the police locked you up for a crime you didn't do?");
-					await change("a", "I felt <span>helpless</span>. I couldn't do anything, they wouldn't listen to me. It was so unfair.");
+					await change("a", "Old man: I felt <span>helpless</span>. I couldn't do anything, they wouldn't listen to me. It was so unfair.");
 					await fadein("q", 1000, 42);
-					await sleep(1000);
+					await sleep(1500);
 					await fadein("a", 1000, 42);
 					console.log("q4");
 				}
@@ -123,6 +123,10 @@
 	</head>
 	<body onload="intro()">
 		<div class="left">
+			<p>something1</p>
+			<p>something2</p>
+			<p>something3</p>
+			<p>something4</p>
 			<img src="./man.png" class="p" alt="hi">
 		</div>
 		<div class="right">
@@ -134,7 +138,7 @@
 			</div>
 			<h1 id="intro" class="intro" style="opacity:0;">I'm an old man</h1>
 			<div id="questions" class="questions" style="opacity:0;">
-				<h2>Ask a question</h2>
+				<h2>Ask a question to the old man</h2>
 				<p id="q1" onclick="q('q1', 1000, 42)">How did you feel when other inmates make fun of you?</p>
 				<p id="q2" onclick="q('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
 				<p id="q3" onclick="q('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>

@@ -18,17 +18,11 @@ body {
 	display: flex;
 }
 
-/* border on transparent image
- * https://stackoverflow.com/questions/12690444/css-border-on-png-image-with-transparent-parts
- * only react when on non-transparent parts
- * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map
- * https://www.w3schools.com/htmL/html_images_imagemap.asp
- */
 .p {
-	width: 70%;
+	width: 50%;
 	height: auto;
 	position: absolute;
-	top: 50%;
+	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -48,7 +42,8 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-size: 2.5em;
+	font-size: 2.7vw;
+	width: 80%;
 }
 
 .left {
