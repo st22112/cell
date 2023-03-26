@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>cell one</title>
+		<title>Ask the old man</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preload" href="main.css" as="style">
 		<link rel="stylesheet" href="main.css">
 		<script>
 			async function intro() {
+				await change("intro", "I'm an old man");
 				await sleep(500);
 				await fadein("intro", 1000, 42);
 				await sleep(1500);
