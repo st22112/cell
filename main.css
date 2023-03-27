@@ -23,14 +23,24 @@ body {
 	background-color: var(--bgColour);
 	color: var(--charColour);
 	height: 100%;
+	width: 100%;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 	padding-right: 0px;
 	margin: 0px;
+	font-family: "LibreFranklin";
+}
+
+.noOpacity {
+	opacity: 0;
+}
+
+.start {
+	height: 100%;
+	width: 100%;
 	display: flex;
 	overflow: hidden;
-	font-family: "LibreFranklin";
 }
 
 .p {

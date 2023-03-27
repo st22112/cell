@@ -148,27 +148,29 @@
 		</script>
 	</head>
 	<body onload="intro()">
-		<div class="left start">
-			<p id="o1" class="o1 o" style="opacity:0;">weak</p>
-			<p id="o2" class="o2 o" style="opacity:0;">miserable</p>
-			<p id="o3" class="o3 o" style="opacity:0;">humiliated</p>
-			<p id="o4" class="o4 o" style="opacity:0;">helpless</p>
-			<img src="./man.png" class="p" alt="hi">
-		</div>
-		<div class="right start">
-			<div class="a">
-				<div class="ina">
-					<p id="q" style="opacity:0;">question</p>
-					<p id="a" style="opacity:0;">answer</p>
-				</div>
+		<div id="start" class="start">
+			<div class="left">
+				<p id="o1" class="o1 o noOpacity">weak</p>
+				<p id="o2" class="o2 o noOpacity">miserable</p>
+				<p id="o3" class="o3 o noOpacity">humiliated</p>
+				<p id="o4" class="o4 o noOpacity">helpless</p>
+				<img src="./man.png" class="p" alt="hi">
 			</div>
-			<h1 id="intro" class="intro" style="opacity:0;">I'm an old man</h1>
-			<div id="questions" class="questions" style="opacity:0;">
-				<h2>Ask a question to the old man</h2>
-				<p id="q1" onclick="q('q1', 1000, 42)">How did you feel when the other inmates made fun of you?</p>
-				<p id="q2" onclick="q('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
-				<p id="q3" onclick="q('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
-				<p id="q4" onclick="q('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
+			<div class="right">
+				<div class="a">
+					<div class="ina">
+						<p id="q" class="noOpacity">question</p>
+						<p id="a" class="noOpacity">answer</p>
+					</div>
+				</div>
+				<h1 id="intro" class="intro noOpacity">I'm an old man</h1>
+				<div id="questions" class="questions noOpacity">
+					<h2>Ask a question to the old man</h2>
+					<p id="q1" onclick="q('q1', 1000, 42)">How did you feel when the other inmates made fun of you?</p>
+					<p id="q2" onclick="q('q2', 1000, 42)">How did you feel that you couldn't afford bathing water?</p>
+					<p id="q3" onclick="q('q3', 1000, 42)">How did you feel when the police made you parade naked to get bathing water?</p>
+					<p id="q4" onclick="q('q4', 1000, 42)">How did you feel when the police locked you up for a crime you didn't do?</p>
+				</div>
 			</div>
 		</div>
 		<div class="main">
