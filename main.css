@@ -17,6 +17,7 @@
 
 html {
 	height: 100%;
+	margin: 0px;
 }
 
 body {
@@ -45,6 +46,10 @@ body {
 
 .main {
 	display: none;
+	position: absolute;
+	width: 50%;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 .p {
@@ -130,6 +135,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	display: none;
 }
 
 .questions > p {
