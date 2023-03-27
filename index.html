@@ -95,7 +95,9 @@
 				++qcount;
 				if (qcount >= 4) {
 					await sleep(5000);
-					startmain()
+					await fadeout("start", 3000, 42);
+					snapsFingers("start");
+					startmain();
 				}
 			}
 
@@ -142,6 +144,10 @@
 				return new Promise(resolve => setTimeout(resolve, ms));
 			}
 
+			function snapsFingers(id) {
+				document.getElementById(id).style.display = "none";
+			}
+
 			function change(id, text) {
 				document.getElementById(id).innerHTML = text;
 			}
@@ -173,7 +179,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="main">
+		<div id="main" class="main">
 			<p>test</p>
 		</div>
 	</body>
